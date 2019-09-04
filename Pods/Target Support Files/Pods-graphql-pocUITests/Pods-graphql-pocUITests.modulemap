@@ -1,0 +1,6 @@
+framework module Pods_graphql_pocUITests {
+  umbrella header "Pods-graphql-pocUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
