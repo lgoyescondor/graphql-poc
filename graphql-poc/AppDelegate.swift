@@ -9,8 +9,7 @@
 import UIKit
 import Apollo
 
-let graphQLEndpoint = "https://secure.test.evercheck.com/api/graphql"
-let apollo = ApolloClient(url: URL(string: graphQLEndpoint)!)
+let apollo = Apollo.shared.client
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

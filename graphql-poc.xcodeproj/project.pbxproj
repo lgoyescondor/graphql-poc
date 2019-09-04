@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		661FC39AEB8786BB634083DF /* Pods_graphql_pocTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 978B243F452047B3D1214BBB /* Pods_graphql_pocTests.framework */; };
 		9B1DE93D231F6EEF00E1E665 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1DE93C231F6EEF00E1E665 /* API.swift */; };
+		9B1DE93F231F719600E1E665 /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1DE93E231F719600E1E665 /* Apollo.swift */; };
 		9B1EFFA6231F65DB00C705A0 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B1EFFA5231F65DB00C705A0 /* schema.json */; };
 		9B5CB49E231F6BB80016E67D /* ViewController.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 9B5CB49D231F6BB80016E67D /* ViewController.graphql */; };
 		9BC290DD231F00A40034D116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC290DC231F00A40034D116 /* AppDelegate.swift */; };
@@ -47,6 +48,7 @@
 		8B8953067123FDBDD44E6A3D /* Pods-graphql-poc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-graphql-poc.release.xcconfig"; path = "Target Support Files/Pods-graphql-poc/Pods-graphql-poc.release.xcconfig"; sourceTree = "<group>"; };
 		978B243F452047B3D1214BBB /* Pods_graphql_pocTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_graphql_pocTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B1DE93C231F6EEF00E1E665 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		9B1DE93E231F719600E1E665 /* Apollo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
 		9B1EFFA3231F65B800C705A0 /* Apollo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Apollo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B1EFFA5231F65DB00C705A0 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		9B5CB49D231F6BB80016E67D /* ViewController.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = ViewController.graphql; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				9BC290E5231F00A50034D116 /* LaunchScreen.storyboard */,
 				9BC290E8231F00A50034D116 /* Info.plist */,
 				9B5CB49D231F6BB80016E67D /* ViewController.graphql */,
+				9B1DE93E231F719600E1E665 /* Apollo.swift */,
 			);
 			path = "graphql-poc";
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 			files = (
 				9BC290DF231F00A40034D116 /* ViewController.swift in Sources */,
 				9B1DE93D231F6EEF00E1E665 /* API.swift in Sources */,
+				9B1DE93F231F719600E1E665 /* Apollo.swift in Sources */,
 				9BC290DD231F00A40034D116 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

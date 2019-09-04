@@ -12,7 +12,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        apollo.fetch(query:  GetLicenseCategoryCountQuery(employerId: "311", userId: "4212191")) { (result) in
+            switch result {
+            case .success(let value):
+                print("Success ")
+            case .failure(let error):
+                print("An error just ocurred (" + error.localizedDescription + ")")
+            }
+        }
     }
 
 
