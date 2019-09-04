@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import Apollo
+
+let graphQLEndpoint = "https://secure.test.evercheck.com/api/graphql"
+let apollo = ApolloClient(url: URL(string: graphQLEndpoint)!)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

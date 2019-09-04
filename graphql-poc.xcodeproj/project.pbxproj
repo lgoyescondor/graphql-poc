@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		661FC39AEB8786BB634083DF /* Pods_graphql_pocTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 978B243F452047B3D1214BBB /* Pods_graphql_pocTests.framework */; };
+		9B1DE93D231F6EEF00E1E665 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1DE93C231F6EEF00E1E665 /* API.swift */; };
+		9B1EFFA6231F65DB00C705A0 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B1EFFA5231F65DB00C705A0 /* schema.json */; };
+		9B5CB49E231F6BB80016E67D /* ViewController.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 9B5CB49D231F6BB80016E67D /* ViewController.graphql */; };
 		9BC290DD231F00A40034D116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC290DC231F00A40034D116 /* AppDelegate.swift */; };
 		9BC290DF231F00A40034D116 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC290DE231F00A40034D116 /* ViewController.swift */; };
 		9BC290E2231F00A40034D116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BC290E0231F00A40034D116 /* Main.storyboard */; };
@@ -43,6 +46,10 @@
 		807C3B2A5A6F34632CCE430B /* Pods-graphql-pocUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-graphql-pocUITests.release.xcconfig"; path = "Target Support Files/Pods-graphql-pocUITests/Pods-graphql-pocUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8B8953067123FDBDD44E6A3D /* Pods-graphql-poc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-graphql-poc.release.xcconfig"; path = "Target Support Files/Pods-graphql-poc/Pods-graphql-poc.release.xcconfig"; sourceTree = "<group>"; };
 		978B243F452047B3D1214BBB /* Pods_graphql_pocTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_graphql_pocTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B1DE93C231F6EEF00E1E665 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		9B1EFFA3231F65B800C705A0 /* Apollo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Apollo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B1EFFA5231F65DB00C705A0 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		9B5CB49D231F6BB80016E67D /* ViewController.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = ViewController.graphql; sourceTree = "<group>"; };
 		9BC290D9231F00A40034D116 /* graphql-poc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "graphql-poc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC290DC231F00A40034D116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BC290DE231F00A40034D116 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,13 +106,13 @@
 				27AC4B933282C618ED2D6D1C /* Pods-graphql-pocUITests.debug.xcconfig */,
 				807C3B2A5A6F34632CCE430B /* Pods-graphql-pocUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		9AD6D34D1A50882E30904540 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B1EFFA3231F65B800C705A0 /* Apollo.framework */,
 				E855246E86D7C50DB7A352FF /* Pods_graphql_poc.framework */,
 				978B243F452047B3D1214BBB /* Pods_graphql_pocTests.framework */,
 				D4820C89C892F2D8977DAA9B /* Pods_graphql_pocUITests.framework */,
@@ -138,12 +145,15 @@
 		9BC290DB231F00A40034D116 /* graphql-poc */ = {
 			isa = PBXGroup;
 			children = (
+				9B1DE93C231F6EEF00E1E665 /* API.swift */,
+				9B1EFFA5231F65DB00C705A0 /* schema.json */,
 				9BC290DC231F00A40034D116 /* AppDelegate.swift */,
 				9BC290DE231F00A40034D116 /* ViewController.swift */,
 				9BC290E0231F00A40034D116 /* Main.storyboard */,
 				9BC290E3231F00A50034D116 /* Assets.xcassets */,
 				9BC290E5231F00A50034D116 /* LaunchScreen.storyboard */,
 				9BC290E8231F00A50034D116 /* Info.plist */,
+				9B5CB49D231F6BB80016E67D /* ViewController.graphql */,
 			);
 			path = "graphql-poc";
 			sourceTree = "<group>";
@@ -174,6 +184,7 @@
 			buildConfigurationList = 9BC29101231F00A50034D116 /* Build configuration list for PBXNativeTarget "graphql-poc" */;
 			buildPhases = (
 				21B0168BAABFBCDF2E536B2C /* [CP] Check Pods Manifest.lock */,
+				9B1EFFA2231F652100C705A0 /* Generate Apollo GraphQL API */,
 				9BC290D5231F00A40034D116 /* Sources */,
 				9BC290D6231F00A40034D116 /* Frameworks */,
 				9BC290D7231F00A40034D116 /* Resources */,
@@ -274,9 +285,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B1EFFA6231F65DB00C705A0 /* schema.json in Resources */,
 				9BC290E7231F00A50034D116 /* LaunchScreen.storyboard in Resources */,
 				9BC290E4231F00A50034D116 /* Assets.xcassets in Resources */,
 				9BC290E2231F00A40034D116 /* Main.storyboard in Resources */,
+				9B5CB49E231F6BB80016E67D /* ViewController.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +376,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9B1EFFA2231F652100C705A0 /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/check-and-run-apollo-cli.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n";
+		};
 		D3EBA9CC36E2E33247C3C66C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -388,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BC290DF231F00A40034D116 /* ViewController.swift in Sources */,
+				9B1DE93D231F6EEF00E1E665 /* API.swift in Sources */,
 				9BC290DD231F00A40034D116 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,11 @@
+
+query GetLicenseCategoryCount($employerId: String!, $userId: String!) {
+    getLicenseCategoryCount(
+                            data: {
+                            employerId: $employerId,
+                            userId: $userId
+                            }
+                            ) {
+        warning
+    }
+}
